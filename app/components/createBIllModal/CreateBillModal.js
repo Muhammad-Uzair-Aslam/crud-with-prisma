@@ -19,7 +19,7 @@ const CreateBillModal = ({ isOpen, onClose, onCreate }) => {
         "units": parseInt(units),
         "consumerNumber": consumerNumber,
         "address": address,
-        "status": false
+        "status": true
       });
 
       var requestOptions = {
@@ -29,7 +29,7 @@ const CreateBillModal = ({ isOpen, onClose, onCreate }) => {
         redirect: 'follow'
       };
 
-      await fetch("http://localhost:3000/api/bills", requestOptions)
+      await fetch("http://localhost:3001/api/bills", requestOptions)
 
       alert("Succesfully data created")
     } catch (error) {
